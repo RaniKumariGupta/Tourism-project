@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRAVEY</title>
+    <link rel="shortcut icon" href="images/logoo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <!-- bootstrap link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- fontawesome link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <style>
+        ul{
+            gap: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- navbar  -->
+    <nav class="navbar navbar-expand-lg" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" id="logo"><img src="images/logo2.png" alt="" style="width: 100px; height: 50px;"><span>T</span>RA<span
+                    style=" color:#ffa500;">V</span>EY</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span><i class="fa-solid fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#book">Book</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#packages">Packages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="product1.html">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar end  -->
+    <!-- home section start  -->
+    <div class="home">
+        <div class="content">
+            <h5>Welcome to TRAVEY</h5>
+            <h1>Destination <span class="changecontent"></span></h1>
+            <p>“The best education you will ever get is traveling. Nothing teaches you more than exploring the world and
+                accumulating experiences.”</p>
+            <a href="#book">Book Now</a>
+        </div>
+    </div>
+    <!-- home section end  -->
+    <!-- book section start  -->
+    <div class="book" id="book">
+        <div class="container">
+            <div class="main-text">
+                <h1><span style="color: #2ECC71;">B</span>o<span style="color: #ffa500;">o</span>k</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-6 py-3 py-md-0">
+                    <div class="card">
+                        <img src="./images/book.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6 py-3 py-md-0">
+                    <form action="#">
+                        <input type="text" class="form-control" placeholder="Where To" id="whereTo" required><br>
+                        <!-- <input type="text" class="form-control" placeholder="Where To" id="whereTo" required onchange="whereTo()"><br> -->
+                        <input type="text" class="form-control" placeholder="How Many" required><br>
+                        <input type="date" class="form-control" placeholder="Arrivals Time" required><br>
+                        <input type="date" class="form-control" placeholder="Leaving Time" required><br>
+                        <textarea class="form-control" rows="5" name="text"
+                            placeholder="Enter Your Name and Details"></textarea><br>
+                        <input type="submit" value="Book Now" class="submit" required>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- book section end  -->
+
+    <!-- packages start  -->
+    <section class="packages" id="packages">
+        <div class="container">
+            <div class="main-txt">
+                <h1><span style="color: #2ECC71;">P</span>ack<span style="color: #ffa500;">a</span>ges</h1>
+            </div>
+            <div class="row" style="margin-top: 30px;">
+                <div class="col-md-4 py-3 py-md-0">
+                    <div class="card">
+                        <img src="image/banner1.jpg" alt="">
+                        <div class="card-body">
+                            <h3>Kathmandu</h3>
+                            <p>Kathmandu is the vibrant capital of Nepal, known for its rich history, stunning temples,
+                                and breathtaking mountain views.</p>
+                            <div class="star">
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star "></i>
+                                <i class="fa-solid fa-star "></i>
+                            </div>
+                            <h6>Price: <strong>Rs.10,000</strong></h6>
+                            <p> 2-Days &nbsp; 1-Night &nbsp; 3-People</p>
+                            <a href="#book">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 py-3 py-md-0">
+                    <div class="card">
+                        <img src="images/grida.jpg" alt="">
+                        <div class="card-body">
+                            <h3>Pokhara</h3>
+                            <p>Pokhara: Lakes, mountains, and adventure await in this Nepalese city embraced by natural
+                                beauty.</p>
+                            <div class="star">
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                            </div>
+                            <h6>Price: <strong>Rs.20,000</strong></h6>
+                            <p> 1-Week &nbsp; 6-Night &nbsp; 2-People</p>
+                            <a href="#book">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 py-3 py-md-0">
+                    <div class="card">
+                        <img src="image/travel-1.jpg" alt="">
+                        <div class="card-body">
+                            <h3>Nagarkot</h3>
+                            <p>Nagarkot: Serene hilltop town near Kathmandu, known for its breathtaking Himalayan views
+                                and peaceful ambiance.</p>
+                            <div class="star">
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star "></i>
+                                <i class="fa-solid fa-star "></i>
+                            </div>
+                            <h6>Price: <strong>Rs.8,000</strong></h6>
+                            <p> 1-Days &nbsp; 3-People</p>
+                            <a href="#book">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 30px;">
+                <div class="col-md-4 py-3 py-md-0">
+                    <div class="card">
+                        <img src="image/lumbi.jpg" alt="">
+                        <div class="card-body">
+                            <h3>Lumbini</h3>
+                            <p>Lumbini: Buddha's birthplace, a revered pilgrimage site in Nepal, embodying peace and
+                                spirituality.</p>
+                            <div class="star">
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star "></i>
+                                <i class="fa-solid fa-star "></i>
+                            </div>
+                            <h6>Price: <strong>Rs.18,000</strong></h6>
+                            <p> 4-Days &nbsp; 2-Night &nbsp; 2-People</p>
+                            <a href="#book">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 py-3 py-md-0">
+                    <div class="card">
+                        <img src="images/ta1.jpeg" alt="">
+                        <div class="card-body">
+                            <h3>Mustang</h3>
+                            <p>Mustang: Mystical landscapes, ancient monasteries, and Himalayan allure define this
+                                captivating Nepalese region.</p>
+                            <div class="star">
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                            </div>
+                            <h6>Price: <strong>Rs.22,000</strong></h6>
+                            <p> 10-Days &nbsp; 8-Night &nbsp; 2-People</p>
+                            <a href="#book">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 py-3 py-md-0">
+                    <div class="card">
+                        <img src="image/jnkpu.jpg" alt="">
+                        <div class="card-body">
+                            <h3>Janakpur</h3>
+                            <p>Janakpur: A sacred city in Nepal, revered as the birthplace of Sita, with ornate temples,
+                                colorful festivals, and cultural significance.</p>
+                            <div class="star">
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                            </div>
+                            <h6>Price: <strong>Rs.27,000</strong></h6>
+                            <p> 6-Days &nbsp; 4-Night &nbsp; 5-People</p>
+                            <a href="#book">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- packages end  -->
+
+    <!-- services start  -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="main-txt">
+                <h1><span style="color: #2ECC71;">S</span>erv<span style="color: #ffa500;">i</span>ces</h1>
+            </div>
+            <div class="row" style="margin-top: 30px;">
+                <div class="col-md-4 py-3 py-md-0">
+                    <div class="card">
+                        <i class="fas fa-hotel"></i>
+                        <div class="card-body">
+                            <h3>Affordable Hotel</h3>
+                            <p>Hotels provide lodging, meals, and services for travelers, ensuring comfort and convenience during their journeys.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 py-3 py-md-0">
+                    <div class="card">
+                        <i class="fas fa-utensils"></i>
+                        <div class="card-body">
+                            <h3>Food and Drinks</h3>
+                            <p>Hotels offer a variety of food and drinks, including restaurants, bars, and room service, catering to guests' culinary preferences.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 py-3 py-md-0">
+                    <div class="card">
+                        <i class="fas fa-bullhorn"></i>
+                        <div class="card-body">
+                            <h3>Safety Guide</h3>
+                            <p>Ensure personal safety while traveling: research destinations, secure belongings, be aware of surroundings, and follow local laws and customs.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row" style="margin-top: 30px;">
+                <div class="col-md-4 py-3 py-md-0">
+                    <div class="card">
+                        <i class="fas fa-plane"></i>
+                        <div class="card-body">
+                            <h3>Airlines</h3>
+                            <p>Airlines provide air transportation services, flying passengers to various destinations worldwide, offering comfort, convenience, and efficient travel options.Airlines like Yeti airlines,Buddha airlines, etc</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 py-3 py-md-0">
+                    <div class="card">
+                        <i class="fas fa-bus"></i>
+                        <div class="card-body">
+                            <h3>Bus/Vehicle</h3>
+                            <p>Buses and vehicles provide transportation on roads, offering convenience and mobility for commuting, travel, and transportation of goods.Vehicles-car,bike, etc</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 py-3 py-md-0">
+                    <div class="card">
+                        <i class="fas fa-route"></i>
+                        <div class="card-body">
+                            <h3>Routes</h3>
+                            <p>Bus/vehicle routes include city, intercity, rural, and specialized routes, connecting destinations and providing transportation services for passengers and goods.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- services end  -->
+    <!-- gallery start  -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="main-txt">
+                <h1><span style="color: #2ECC71;">G</span>all<span style="color: #ffa500;">e</span>ry</h1>
+            </div>
+            <div class="row" style="margin-top: 30px;">
+                <div class="col-md-4 py-3 md-0">
+                    <div class="card">
+                        <img src="images/bg2.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="col-md-4 py-3 md-0">
+                    <div class="card">
+                        <img src="images/temple.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="col-md-4 py-3 md-0">
+                    <div class="card">
+                        <img src="images/fm-trip1.jpeg" alt="">
+                    </div>
+                </div>     
+            </div>
+            <div class="row" style="margin-top: 30px;">
+                <div class="col-md-4 py-3 md-0">
+                    <div class="card">
+                        <img src="image/bg11.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-md-4 py-3 md-0">
+                    <div class="card">
+                        <img src="image/travel-4.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-md-4 py-3 md-0">
+                    <div class="card">
+                        <img src="images/ziplyng.jpeg" alt="">
+                    </div>
+                </div>     
+            </div>
+        </div>
+    </section>
+    <!-- gallery end  -->
+
+    <!-- about start  -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="main-txt">
+                <h1><span style="color: #2ECC71;">A</span>bout-<span style="color: #ffa500;">U</span>s</h1>
+            </div>
+            <div class="row">
+
+                <div class="col-md-6 py-3 py-md-0">
+                    <div class="card">
+                        <img src="image/abt.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6 py-3 py-md-0">
+                    <h2>"Discover Unforgettable Moments of Beauty and Comfort"</h2>
+                    <p>"Welcome to our travel website, your ultimate guide to extraordinary destinations, thrilling adventures, and unforgettable experiences. We are passionate about helping you create lifelong memories and explore the world with ease. From stunning landscapes to vibrant cultures, we curate travel content and resources to inspire, inform, and assist you in planning your next remarkable journey. Join us as we embark on a virtual voyage, igniting your wanderlust and providing the tools to turn your travel dreams into reality."</p>
+                    <button id="about-btn"><a href="about.html" style="text-decoration: none; color:white;">Read More...</a></button>
+                    <!-- <button id="about-btn">Read More...</button> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- about end  -->
+    <!-- footer start  -->
+    <footer id="footer">
+        <h1><span style="color: #2ECC71;">T</span>ra<span style="color: #ffa500;">v</span>ey</h1>
+        <p>Lorem ipsum dolor sit officiis vel. Laboriosam, ex dolore. Enim dicta ipsum consequatur cum!</p>
+        <div class="social-links">
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-pinterest"></i>
+            <i class="fa-brands fa-youtube"></i>
+        </div>
+        <div class="credit">
+            <p>Designed By <a href="#">Zoya Gupta</a></p>
+        </div>
+        <div class="copyright">
+            <p>&Copyright Zoya Gupta.All Right</p>
+        </div>
+    </footer>
+    <!-- footer end  -->
+    <!-- bootstrap cdn link  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="product1.css">
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body class="">
+
+        <div class="container">
+            <header>
+                <h1 style="text-align: center; text-decoration: underline;"><span style="color: #07ed1e;">Y</span>our <span style="color: aqua;">S</span>hopping <span style="color: #E8BC0E;">C</span>art</h1>
+                <div class="shopping">
+                    <img src="image/cart1.png">
+                    <span class="quantity">0</span>
+                </div>
+            </header>
+
+            <div class="list"> </div>
+        </div>
+        <div class="card">
+            <h1>Card</h1>
+            <ul class="listCard">
+            </ul>
+            <div class="checkOut">
+                <div class="total">0</div>
+                <div class="closeShopping">Close</div>
+            </div>
+        </div>
+
+        <script>
+
+            let openShopping = document.querySelector('.shopping');
+            let closeShopping = document.querySelector('.closeShopping');
+            let list = document.querySelector('.list');
+            let listCard = document.querySelector('.listCard');
+            let body = document.querySelector('body');
+            let total = document.querySelector('.total');
+            let quantity = document.querySelector('.quantity');
+
+            openShopping.addEventListener('click', () => {
+                body.classList.add('active');
+            })
+            closeShopping.addEventListener('click', () => {
+                body.classList.remove('active');
+            })
+
+            let products = [
+                {
+                    id: 1,
+                    name: 'Bottle',
+                    image: 'bottl1.jpeg',
+                    price: 850
+                },
+                {
+                    id: 2,
+                    name: 'Tent',
+                    image: 'tent.jpg',
+                    price: 2500
+                },
+                {
+                    id: 3,
+                    name: 'Jacket',
+                    image: 'jacket.jpg',
+                    price: 4500
+                },
+                {
+                    id: 4,
+                    name: 'Sleeping Bag',
+                    image: 'sleepbag.jpg',
+                    price:  6500
+                },
+                {
+                    id: 5,
+                    name: 'Down Jacket',
+                    image: 'down jacket.jpg',
+                    price: 8000
+                },
+                {
+                    id: 6,
+                    name: 'Camera',
+                    image: 'camera1.jpg',
+                    price: 35000
+                }
+            ];
+            let listCards = [];
+            function initApp() {
+                products.forEach((value, key) => {
+                    let newDiv = document.createElement('div');
+                    newDiv.classList.add('item');
+                    newDiv.innerHTML = `
+            <img src="images/${value.image}">
+            <div class="title">${value.name}</div>
+            <div class="price">${value.price.toLocaleString()}</div>
+            <button onclick="addToCard(${key})">Add To Card</button>`;
+                    list.appendChild(newDiv);
+                })
+            }
+            initApp();
+            function addToCard(key) {
+                if (listCards[key] == null) {
+                    // copy product form list to list card
+                    listCards[key] = JSON.parse(JSON.stringify(products[key]));
+                    listCards[key].quantity = 1;
+                }
+                reloadCard();
+            }
+            function reloadCard() {
+                listCard.innerHTML = '';
+                let count = 0;
+                let totalPrice = 0;
+                listCards.forEach((value, key) => {
+                    totalPrice = totalPrice + value.price;
+                    count = count + value.quantity;
+                    if (value != null) {
+                        let newDiv = document.createElement('li');
+                        newDiv.innerHTML = `
+                <div><img src="images/${value.image}"/></div>
+                <div>${value.name}</div>
+                <div>${value.price.toLocaleString()}</div>
+                <div>
+                    <button onclick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
+                    <div class="count">${value.quantity}</div>
+                    <button onclick="changeQuantity(${key}, ${value.quantity + 1})">+</button>
+                </div>`;
+                        listCard.appendChild(newDiv);
+                    }
+                })
+                total.innerText = totalPrice.toLocaleString();
+                quantity.innerText = count;
+            }
+            function changeQuantity(key, quantity) {
+                if (quantity == 0) {
+                    delete listCards[key];
+                } else {
+                    listCards[key].quantity = quantity;
+                    listCards[key].price = quantity * products[key].price;
+                }
+                reloadCard();
+            }
+        </script>
+    </body>
+
+    </html>
